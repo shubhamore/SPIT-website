@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* font-family: 'Noto Sans Mono', monospace; */
+#right-admin{
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    color: red;
+}
+body{
+    min-height: 100vh;
+}
+nav{
+    /* position: sticky; */
+    position: relative;
+    /* top: 10px; */
+    width: 100%;
+}
+nav header{
+    margin: 0px 25px;
+    /* height: 100px; */
+    display: flex;
+    text-align: center;
+}
+nav header h1{
+    display: inline-block;
+    /* text-align: center; */
+    margin: auto 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: brown;
+}
+nav header img{
+    height: 100px;
+    margin-right: 10px;
+}
+#navbar{
+    /* display: inline-block; */
+    background-color: blueviolet;
+    width: 100%;
+    /* text-align: right; */
+    padding: 5px 45px;
+    height:65px;
+    display:flex;
+    top: 0;
+    justify-content: right;
+    align-items: center;
+    /* position: sticky; */
+    position: sticky;
+    /* position: -webkit-sticky; */
+    top: 0;
+}
+#apply-now-btn{
+    background: linear-gradient(to right,#d97020,#ce30b9);    
+    padding: 15px 25px;
+    border-radius: 15px;
+    color: wheat;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+}
+.landing-page{
+    min-height: 100vh;
+    background-color: rgb(202, 202, 8);
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+.landing-text{
+    color: white;
+    /* font-family: sans-serif; */
+    /* font-size: 50px; */
+    font-weight: bolder;
+    -webkit-text-stroke: 1px black;
+    font-family: 'Courier New', Courier, monospace;
+}
+.landing-text .big{
+    font-size: 110px;
+}
+.courses{
+    padding: 50px;
+    min-height: 450px;
+    background-color: blue;
+}
+.courses h1{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    padding-bottom: 50px;
+    -webkit-text-stroke: 1px red;
+}
+.course-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.course{
+    height: 200px;
+    width: 200px;
+    background-color: cadetblue;
+    border-radius: 50%;
+    color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+    margin: 25px;
+}
+.course h3{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.course:hover{
+    transform:scale(1.2);
+}
+.trainingandplacement{
+    background-color: aquamarine;
+    padding: 50px 0;
+}
+.trainingandplacement  h1{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    padding-bottom: 50px;
+    -webkit-text-stroke: 1px red;
+}
+.trainingandplacement h3{
+    width: 55vw;
+    border: 2px solid rgb(68, 67, 67);
+    text-align: justify;
+    margin: 0 auto ;
+    color: grey;
+    padding: 15px 35px;
+    margin-bottom: 25px;
+    border-radius: 5px 35px;
+}
+#place1{
+    width: 750px;
+    margin: 0 auto ;
+    /* margin-left: auto; */
+    /* padding: 0 auto; */
+    /* margin-right: auto; */
+    /* margin: 5px 25px 10px 3px ; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+@media screen and (max-width:760px){
+    #place1{
+        width: 100vw;
+    }
+    .trainingandplacement h3{
+        width:85vw;
+    }
+}
