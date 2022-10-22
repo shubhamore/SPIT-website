@@ -1,300 +1,231 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* overflow: hidden; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+nav {
+  position: relative;
+  width: 100%;
+  background-color: black;
+}
+nav header {
+  padding: 5px 25px;
+  height: 7rem;
+  display: flex;
+}
+.left {
+  display: flex;
+}
+.college-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav header h1,
+nav header h4 {
+  display: inline-block;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+nav header h4 {
+  font-size: initial;
+  font-weight: initial;
+}
+nav header img {
+  height: 100px;
+  margin-right: 10px;
+}
+#navbar {
+  background-color: crimson;
+  width: 100%;
+  z-index: 70;
+  height: 3.5rem;
+  display: flex;
+  top: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+#navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+#apply-now-btn {
+  background: linear-gradient(to right, #d97020, #ce30b9);
+  padding: 15px 25px;
+  border-radius: 15px;
+  color: wheat;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+.landing-page {
+  height: calc(100vh - 7rem - 3.5rem);
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+.landing-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/college_gate.png") center/cover no-repeat;
+  filter: grayscale(75%);
+  z-index: -10;
+}
+#box-landing-page {
+  position: absolute;
+  height: 400px;
+  max-width: 600px;
+  width: 75%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slides {
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.slides img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.35;
   }
-  /* font-family: 'Noto Sans Mono', monospace; */
-  /* #right-admin{
-      position: absolute;
-      right: 10px;
-      top: 30px;
-      color: red;
-  } */
-  body {
-    min-height: 100vh;
+  to {
+    opacity: 1;
   }
-  nav {
-    /* position: sticky; */
-    /* z-index: 10; */
-    position: relative;
-    /* top: 10px; */
-    width: 100%;
-    background-color: black;
+}
+.gradient-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 410px;
+  max-width: 610px;
+  width: 77.5%;
+  cursor: pointer;
+  background: linear-gradient(
+    60deg,
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
   }
-  nav header {
-    padding: 5px 25px;
-    height: 7rem;
-    display: flex;
-    /* text-align: center; */
-  }
-  .left{
-      display: flex;
-  
-  }
-  .college-text{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  }
-  nav header h1 ,nav header h4{
-    display: inline-block;
-    /* text-align: center; */
-    /* margin: auto 0; */
-    font-family: "Times New Roman", Times, serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-  }
-  nav header h4{
-      font-size: initial;
-      font-weight: initial;
-  }
-  nav header img {
-      height: 100px;
-      margin-right: 10px;
-  }
-  #navbar {
-    /* display: inline-block; */
-    /* background-color: #06264c; */
-    background-color: crimson;
-    width: 100%;
-    z-index: 70;
-    /* text-align: right; */
-    /* padding: 5px 45px; */
-    height: 3.5rem;
-    display: flex;
-    top: 0;
-    justify-content: space-evenly;
-    align-items: center;
-    /* position: sticky; */
-    position: sticky;
-    /* position: -webkit-sticky; */
-    top: 0;
-  }
-  #navbar a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.2rem;
-    /* color: #ed3132; */
-    /* color: #06264c; */
-    color: white;
-    font-weight: bolder;
-    text-transform: uppercase;
-  }
-  #apply-now-btn {
-    background: linear-gradient(to right, #d97020, #ce30b9);
-    padding: 15px 25px;
-    border-radius: 15px;
-    color: wheat;
-    font-weight: 600;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  .landing-page {
-    height: calc(100vh - 7rem - 3.5rem);
-    /* background-color: rgb(202, 202, 8); */
-    /* background: url('images/college_gate.png')  center/cover no-repeat; */
-    display: flex;
-    /* bottom: 0; */
-    text-align: center;
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: center;
-  }
-  .landing-page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("images/college_gate.png") center/cover no-repeat;
-    /* background-image: url(graphic-to-be-filtered.jpg); */
-    filter: grayscale(75%);
-    z-index: -10;
-  }
-  #box-landing-page {
-    position: absolute;
-    /* border: 2px solid crimson; */
-    height: 400px;
-    max-width: 600px;
-    width: 75%;
-    /* background-color: aliceblue; */
-    /* top: 50%;
-      right: 50%; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* animation-name: fade;
-      animation-duration: 3s;
-      animation-iteration-count: infinite; */
-  }
-  .slides {
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-  }
-  .slides img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  /* @keyframes fade{
-      0%{
-          opacity: .75;
-      }
-      25%{
-          opacity: .95;
-      }
-      50%{
-          opacity: 1;
-      }
-      75%{
-          opacity: .95;
-      }
-      100%{
-          opacity: .75;
-      }
-  } */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  @keyframes fade {
-    from {
-      opacity: 0.35;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .gradient-border {
-    /* position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 200px;
-    font-family: Lato, sans-serif;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: white;
-    background: #222;
-    border-radius: 3px; */
-    /* z-index: -1; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 410px;
-    max-width: 610px;
-    width: 77.5%;
-    cursor: pointer;
-    background: linear-gradient(
-      60deg,
-      hsl(224, 85%, 66%),
-      hsl(269, 85%, 66%),
-      hsl(314, 85%, 66%),
-      hsl(359, 85%, 66%),
-      hsl(44, 85%, 66%),
-      hsl(89, 85%, 66%),
-      hsl(134, 85%, 66%),
-      hsl(179, 85%, 66%)
-    );
-    background-size: 300% 300%;
-    background-position: 0 50%;
-    animation: moveGradient 4s alternate infinite;
-    /* border-radius: calc(2 * var(--border-width)); */
-  }
-  
-  @keyframes moveGradient {
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  .courses {
-    padding: 50px;
-    min-height: 450px;
-    background-color: blue;
-  }
-  .courses h1 {
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    padding-bottom: 50px;
-    -webkit-text-stroke: 1px red;
-  }
-  .course-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .course {
-    height: 200px;
-    width: 200px;
-    background-color: cadetblue;
-    border-radius: 50%;
-    color: crimson;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-    transition: all 0.25s ease-in-out;
-    cursor: pointer;
-    margin: 25px;
-  }
-  .course h3 {
-    text-align: center;
-    font-weight: bolder;
-    font-size: 20px;
-  }
-  .course:hover {
-    transform: scale(1.2);
-  }
-  .trainingandplacement {
-    background-color: aquamarine;
-    padding: 50px 0;
-  }
-  .trainingandplacement h1 {
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    padding-bottom: 50px;
-    -webkit-text-stroke: 1px red;
+}
+
+.courses {
+  padding: 50px;
+  min-height: 450px;
+  background-color: blue;
+}
+.courses h1 {
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  padding-bottom: 50px;
+  -webkit-text-stroke: 1px red;
+}
+.course-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.course {
+  height: 200px;
+  width: 200px;
+  background-color: cadetblue;
+  border-radius: 50%;
+  color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  margin: 25px;
+}
+.course h3 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.course:hover {
+  transform: scale(1.2);
+}
+.trainingandplacement {
+  background-color: aquamarine;
+  padding: 50px 0;
+}
+.trainingandplacement h1 {
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  padding-bottom: 50px;
+  -webkit-text-stroke: 1px red;
+}
+.trainingandplacement h3 {
+  width: 55vw;
+  border: 2px solid rgb(68, 67, 67);
+  text-align: justify;
+  margin: 0 auto;
+  color: grey;
+  padding: 15px 35px;
+  margin-bottom: 25px;
+  border-radius: 5px 35px;
+}
+#place1 {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+@media screen and (max-width: 760px) {
+  #place1 {
+    width: 100vw;
   }
   .trainingandplacement h3 {
-    width: 55vw;
-    border: 2px solid rgb(68, 67, 67);
-    text-align: justify;
-    margin: 0 auto;
-    color: grey;
-    padding: 15px 35px;
-    margin-bottom: 25px;
-    border-radius: 5px 35px;
+    width: 85vw;
   }
-  #place1 {
-    width: 750px;
-    margin: 0 auto;
-    /* margin-left: auto; */
-    /* padding: 0 auto; */
-    /* margin-right: auto; */
-    /* margin: 5px 25px 10px 3px ; */
-    text-align: center;
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-  }
-  @media screen and (max-width: 760px) {
-    #place1 {
-      width: 100vw;
-    }
-    .trainingandplacement h3 {
-      width: 85vw;
-    }
-  }
-  
+}
