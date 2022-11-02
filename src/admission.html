@@ -1,0 +1,63 @@
+<!DOCTYPE html5>  
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="admission.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head> 
+<body>  
+<form>  
+  <div class="container">  
+  <center> <h1> Student Registration Form </h1> </center></div></form>
+ 
+  <hr/>  
+  <label> First Name </label>   
+<input type="text" name="firstname" placeholder= "Enter First Name" size="15" required />   
+<label> Middle Name: </label>   
+<input type="text" name="middlename" placeholder="Enter Middle Name" size="15" required />   
+<label> Last Name: </label>    
+<input type="text" name="lastname" placeholder="Enter Last Name" size="15"required />   
+<div>  
+<label>   
+Course :  
+</label>   
+  
+<select>  
+<option value="Course">Select Course</option>  
+<option value="B.Tech COMP Engg">Computer Science</option>  
+<option value="B.Tech AIML/DS (IT) Engg">IT</option>  
+<option value="B.Tech EXTC">Electronics and Telecommunications</option> 
+<option value="MCA">MCA</option>  
+<option value="M.Tech">Futher Studies (M.Tech)</option>  
+</select>  
+</div>  
+<div>  
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+</div>  
+<label>   
+Phone :  
+</label>  
+<input type="text" name="country code" placeholder="Country Code"  value="+91 (default)" size="2"/>   
+<input type="text" name="phone" placeholder="Enter Phone Number" size="10"/ required>   
+Residential Address :  
+<textarea cols="80" rows="5" placeholder="Enter Address" value="Enter Address" required>  
+</textarea>  
+<label for="email"><b>Email</b></label>  
+<input type="text" placeholder="Enter Email" name="email" required>  
+  
+  <label for="psw"><b>Password</b></label>  
+  <input type="password" placeholder="Enter Password" name="psw" required>  
+  <label for="psw-repeat"><b>Confirm Password</b></label>  
+  <input type="password" placeholder="Re-enter Password" name="psw-repeat" required>  
+  <button type="submit" class="registerbtn">Register Now!</button>    
+</form>  
+</body>  
+</html>  
