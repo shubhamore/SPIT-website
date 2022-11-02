@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #16264c;
+    transition: all .15s;
+    color: #fefefe;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title {
+    font-weight: 600;
+    /* color: #16264c; */
+    /* color: #ed3132; */
+    color: #fefefe;
+    /* color: #2e282a; */
+    text-align: center;
+    font-size: 2em;
+    margin: 30px 0px;
+}
+
+.placement {
+    /* background-color:#ed3132; */
+    text-align: justify;
+    width: 80%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* gap: 100px; */
+    /* margin: 100px; */
+    align-items: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* display: contents; */
+    /* align-items: le; */
+    font-size: 1.3em;
+    /* text-align: center; */
+    line-height: 1.3em;
+    /* letter-spacing: .08em; */
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5 {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    /* border: 4px solid #16264c; */
+}
+
+.row-4 p, .row-5 p{
+    /* min-width: 400px; */
+    /* max-width: 100%; */
+    /* width: 100%; */
+    margin-bottom: 20px;
+}
+
+.tile-container {
+    width: 40vw;
+    /* height: 20vh; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    margin: 2vw;
+}
+
+.tile-container img {
+    height: 100%;
+}
+
+.r3,
+.r4 {
+    width: 84vw;
+}
+
+.r5 {
+    width: 80vw;
+}
+
+.summary,
+.recruiters {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.r1-c1,
+.r1-c2,
+.r2-c1,
+.r2-c2,
+.r3,
+.summary-img {
+    border: .25em solid #ed3132;
+}
+
+.r1-c1:hover,
+.r1-c2:hover,
+.r2-c1:hover,
+.r2-c2:hover,
+.r3:hover,
+.summary-img {
+    border: .25em solid #ed3132;
+    /*margin: 0;
+    width: 44vw; */
+    /* padding: 4px; */
+}
+
+
+.r1-c2 {
+    background-color: blueviolet;
+}
+
+.r2-c1 {
+    background-color: brown;
+}
+
+.r2-c2 {
+    background-color: darkseagreen;
+}
+
+
+@media (max-width: 650px) {
+    body {
+        /* background-color: #3dd928; */
+
+    }
+
+    body,
+    .container,
+    .clubs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* align-items: center; */
+        /* background-color: #ed3132; */
+        /* margin: 0px; */
+        /* justify-content: space-around; */
+    }
+
+    .row-1,
+    .row-2,
+    .row-3,
+    .row-4,
+    .row-5 {
+        /* background-color: #ed3132; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-self: center; */
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+
+    .tile-container {
+        width: 90%;
+    }
+}
+
+
+/* -------------header for college name etc */
+nav {
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+
+nav header {
+    padding: 5px 25px;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+
+}
+
+.college-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav header h1,
+nav header h4 {
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav header h4 {
+    font-size: initial;
+    font-weight: initial;
+}
+
+nav header img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.right {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right a {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    nav header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav header {
+        padding: 0;
+    }
+
+    .college-logo img {
+        height: 75px;
+    }
+
+    .college-text {
+        justify-content: space-between;
+    }
+
+    .college-text h4 {
+        font-size: .5rem;
+    }
+
+    .college-text h1 {
+        font-size: 1rem;
+    }
+}
+
+/* -------------navbar that will float at top after the header */
+#navbar {
+    background-color: crimson;
+    width: 100%;
+    z-index: 70;
+    height: 3.5rem;
+    display: flex;
+    top: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    transition: .5s;
+    margin-top: -5px;
+}
+
+#navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#navbar a:hover {
+    color: #c9d7df;
+}
+
+#navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #c9d7df;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+#navbar a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.apply-now-btn {
+    background: linear-gradient(to right, #d97020, #ce30b9);
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    width: fit-content;
+    transition: .5s;
+    color: white;
+
+}
+
+.apply-now-btn:hover {
+    color: wheat;
+
+}
+
+#navbar.active-navbar {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: .75s;
+}
+
+#navbar.active-navbar a {
+    display: inline-block;
+}
+
+#navbar.active-navbar #menu {
+    display: none;
+}
+
+#navbar.active-navbar #close {
+    display: inline-block;
+}
+
+#navbar.active-navbar html {
+    overflow: hidden;
+}
+
+#menu {
+    display: none;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    filter: invert(100%);
+    display: none;
+    cursor: pointer;
+}
+
+#navbar .active-tab {
+    color: black;
+    border-bottom: 4px solid black;
+}
+
+#navbar .active-tab::before {
+    content: none;
+}
+
+#navbar .active-tab:hover {
+    color: initial;
+}
+
+@keyframes underline {
+    from {
+        text-decoration: none;
+    }
+
+    to {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #navbar {
+        justify-content: right;
+    }
+
+    #navbar a {
+        font-weight: bold;
+        display: none;
+    }
+
+    #menu {
+        display: inline-block;
+    }
+}
+
+
+
+/* -------------back to top */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    z-index: 50;
+    font-weight: bolder;
+    padding: 5px;
+    opacity: .75;
+    backdrop-filter: blur(3px);
+    border: 3px solid black;
+    display: none;
+}
+
+#btn-back-to-top img {
+    height: 55px;
+    position: relative;
+    top: 0%;
+    animation-name: move;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#btn-back-to-top:hover {
+    opacity: 1;
+}
+
+@keyframes move {
+    from {
+        top: 5px;
+    }
+
+    to {
+        top: -5px;
+    }
+}
