@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Login</title>
+</head>
+
+<body>
+    <nav>
+        <header>
+            <div class="left">
+                <div class="college-logo">
+                    <img src="../images/logo.png" alt="college logo">
+                </div>
+                <div class="college-text">
+                    <h4 id="bhavans"></h4>
+                    <h1 id="college-name"></h1>
+                    <h4 id="university"></h4>
+                </div>
+            </div>
+            <div class="right">
+                <a href="admin" class="active-tab">
+                    <h4>Admin Login</h4>
+                </a>
+            </div>
+        </header>
+    </nav>
+
+    <div id="navbar">
+        <img src="../images/close.png" alt="close" id="close">
+        <a href="../index">Home</a>
+        <a href="./academics">Academics</a>
+        <a href="./clubs">clubs</a>
+        <a href="./placements">placement</a>
+        <a href="./contactus">contact us</a>
+        <a href="./admission" id="apply-now-btn-">admission</a>
+        <img src="../images/menu.png" alt="menu" id="menu">
+    </div>
+
+    <button type="button" id="btn-back-to-top">
+        <img src="../images/scroll.png" alt="">
+    </button>
+
+    <form class="login" action="/login" method="POST">
+        <h1>Admin Login</h1>
+        <input autocomplete="off" id="username" type="text" placeholder="Username">
+        <input autocomplete="off" id="password" type="password" placeholder="Password">
+        <input type="submit" value="Login" class="button">
+        <!-- <button>Login</button> -->
+    </form>
+
+</body>
+<script src="responsive.js"></script>
+<script>
+    const form=document.querySelector('.login')
+    form.addEventListener('submit',loginUser)
+    async function loginUser(event){
+        event.preventDefault()
+        const username=document.getElementById('username').value
+        const password=document.getElementById('password').value
+        const result = await fetch(' /login',{
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username,
+                password
+            })
+        }).then((res)=> res.json())
+    }
+</script>
+</html>
