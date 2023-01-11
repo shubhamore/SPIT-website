@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="admission.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="admission.css"> -->
+    <link rel="stylesheet" href="../index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body style="background: rgb(193,15,93);
+background: linear-gradient(90deg, rgba(193,15,93,1) 0%, rgba(153,148,233,1) 100%);">
     <nav>
         <header>
             <div class="left">
@@ -45,14 +50,71 @@
         <img src="../images/scroll.png" alt="">
     </button>
 
-    
-    <div class="container">
-        <center>
-            <h1> Student Registration Form </h1>
-        </center>
+    <div class="container my-5">
+        <div class="row align-items-center justify-content-center">
+            <div class="border border-primary col-10 col-sm-9 col-lg-6 py-4 px-lg-5" style="border-radius: 10px; background-color:#c2c2c2;">
+
+                <h1 class="text-capitalize text-center"> Student Registration Form </h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Full Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="course" class="form-label">Course</label>
+                        <select class="form-select" aria-label="Default select example" id="course">
+                            <option selected>Select Course</option>
+                            <option value="1">Computer Engineering</option>
+                            <option value="2">Computer Science and Engineering(A.I. & M.L.)</option>
+                            <option value="3">Computer Science and Engineering(Data Science)</option>
+                            <option value="4">Electronics and Telecommunications Engineering</option>
+                            <option value="5">M.C.A.</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label d-block">Gender:</label>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                               Male
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Female
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="abc@xyz.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone No.</label>
+                        <input type="email" class="form-control" id="phone" placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Residential Address :</label>
+                        <textarea placeholder="Address..." class="form-control" id="address" rows="4"></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <input class="btn btn-dark btn-lg" type="submit" value="Submit">
+                      </div>
+                </form>
+            </div>
+        </div>
+
     </div>
-    
-    <form>
+
+
+    <!-- <form>
         <label> <b>First Name : </b></label> </label>
         <input type="text" name="firstname" placeholder="Enter First Name" size="15" required />
         <label> <b>Middle Name : </b> </label>
@@ -73,7 +135,7 @@
                 <option value="M.Tech">Futher Studies (M.Tech)</option>
             </select>
         </div>
-        <br/>
+        <br />
         <div>
             <label>
                 <b>Gender : </b>
@@ -83,11 +145,11 @@
             <input type="radio" value="Other" name="gender"> Other
 
         </div>
-        <br/>
+        <br />
         <label>
             <b>Phone : </b>
         </label>
-        <br/>
+        <br />
         <input type="text" name="country code" placeholder="Country Code" value="+91 (default)" size="2" />
         <input type="text" name="phone" placeholder="Enter Phone Number" size="10" / required>
         <b>Residential Address : </b>
@@ -97,7 +159,7 @@
         <input type="text" placeholder="Enter Email" name="email" required>
 
         <button type="submit" class="registerbtn">Register Now!</button>
-    </form>
+    </form> -->
 </body>
 <script src="responsive.js"></script>
 
