@@ -40,10 +40,12 @@ let bgIndex=0
 let cardToAppear=0
 let startCardIndex=0
 function findwidth(){
-    if(window.screen.width>850){
+    if(window.innerWidth>850){
+    // if(window.screen.width>850){
         cardToAppear=3
     }
-    else if(window.screen.width>575){
+    else if(window.innerWidth>575){
+    // else if(window.screen.width>575){
         cardToAppear=2
     }
     else{
